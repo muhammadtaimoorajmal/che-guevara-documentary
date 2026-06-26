@@ -1,158 +1,84 @@
-# CHE GUEVARA: PATRIA O MUERTE 🔥
-### The Definitive Interactive Documentary
+<div align="center">
+
+# 🔥 CHE GUEVARA: PATRIA O MUERTE 🔥
+### The Definitive Cinematic Interactive Documentary
+
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Project-cc0000?style=for-the-badge&logo=github)](https://muhammadtaimoorajmal.github.io/che-guevara-documentary/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-black.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > *"Hasta la victoria siempre." — Ernesto "Che" Guevara*
 
-An immersive, cinematic single-page interactive documentary about the life of Ernesto "Che" Guevara (1928–1967) — built entirely with pure HTML, CSS, and vanilla JavaScript. No frameworks. No build tools. Deploy directly to GitHub Pages.
+An immersive, cinematic single-page interactive documentary about the revolutionary life of Ernesto "Che" Guevara (1928–1967). Built entirely with **pure HTML, CSS, and vanilla JavaScript** without any frameworks.
+
+[**👉 CLICK HERE TO VIEW THE LIVE EXPERIENCE 👈**](https://muhammadtaimoorajmal.github.io/che-guevara-documentary/)
 
 ---
 
-## 🎬 Features
+### 🎥 Cinematic Preview
 
-### Opening Cinematic Sequence
-- **WebAudio API** — synthesized match strike sound
-- **Canvas particle system** — floating stars, flame, smoke, embers
-- **Dramatic portrait reveal** — radial flame illumination from below
-- **Web Speech API** — voice narration in Argentine Spanish
-- **Burning text animation** — "PATRIA O MUERTE" burns onto screen
-- Click anywhere or press any key to skip
+<video src="https://raw.githubusercontent.com/muhammadtaimoorajmal/che-guevara-documentary/main/Assets/Videos/preview.mp4" width="100%" autoplay loop muted playsinline controls></video>
 
-### 📜 Interactive Timeline (14 events, 1928–1997)
-- Alternating card layout with scroll-triggered reveals
-- Expandable "Read More" sections for full historical accounts
-- 🎤 "Hear Quote" button — speaks each quote in Spanish
-- 🗺️ "View on Map" — highlights location on the interactive map
-- ▶️ "Play Journey" — auto-scrolls through all events with TTS narration
-
-### 📸 Photo Gallery
-- Masonry grid layout with all 15 real images
-- Category filters: All | Portraits | Cuba | Speeches | Travel
-- Full-screen lightbox with metadata
-- Keyboard navigation (Arrow keys, Escape)
-- Touch swipe support on mobile
-- Film grain CSS aesthetic overlay
-
-### 🗺️ Interactive World Map
-- Canvas-drawn world map (no external APIs)
-- 14 animated location markers with pulsing rings
-- Hover popups with event information
-- Click markers to highlight and get details
-- **Animated journey paths** — bezier curves connecting all locations
-- ▶️ "Play Journey" traces the full path from Rosario to Bolivia
-
-### 🎤 Speeches & Quotes
-- 20 quotes with Spanish/English text
-- Category filters: Famous | Ideology | Historical | Personal
-- Per-card Web Speech API playback with Argentine Spanish voice
-- Equalizer animation during speech
-- "Play All" queue system
-- Volume slider control
-
-### 🕯️ Legacy Section
-- CSS animated eternal flame (multi-layer gradient)
-- Statistics: books, monuments, generations
-- **"Pay Tribute"** — canvas spark burst animation
-- Korda portrait with dramatic breathing animation
-
-### 🎨 Design
-- **Dark/Light theme** toggle (persisted in localStorage)
-- **Custom cursor** with glow ring and click ripples
-- **Parallax** hero background on scroll
-- **Film grain** texture overlay for period authenticity
-- **Smooth scroll-triggered reveals** (IntersectionObserver)
-- Google Fonts: Cinzel + Playfair Display + Roboto
-- **Fully responsive**: 1200px / 1024px / 768px / 480px
+*(If the video does not autoplay, click the play button above)*
 
 ---
 
-## 📁 File Structure
+</div>
 
-```
-├── index.html               Main application
-├── .nojekyll                GitHub Pages config
-├── css/
-│   ├── themes.css           Dark/light CSS custom properties
-│   ├── animations.css       All @keyframes + utility classes
-│   ├── style.css            Layout, components, sections
-│   └── responsive.css       Breakpoint media queries
-├── js/
-│   ├── main.js              App initialization & orchestration
-│   ├── opening-sequence.js  Cinematic intro engine
-│   ├── timeline.js          Timeline renderer & Play Journey
-│   ├── gallery.js           Masonry gallery, lightbox, filters
-│   ├── map.js               Canvas world map & journey animation
-│   ├── audio.js             Web Speech API quote player
-│   ├── particles.js         Canvas particle system
-│   ├── scroll-trigger.js    IntersectionObserver system
-│   ├── cursor-effects.js    Custom cursor
-│   └── utils.js             Shared helpers & easing
-├── data/
-│   ├── timeline-data.js     14 timeline events (JS const)
-│   ├── quotes-data.js       20 quotes (JS const)
-│   └── locations-data.js    Map coordinates (JS const)
-└── Assets/
-    └── Images/              15 real Che Guevara photographs
-```
+## 🌟 Visual Showcase
+
+<p align="center">
+  <img src="Assets/Images/Che_Guevara_-_Guerrillero_Heroico_by_Alberto_Korda.jpg" width="48%" />
+  <img src="Assets/Images/comandante-ernesto-che-guevara.jpg" width="48%" />
+</p>
+<p align="center">
+  <img src="Assets/Images/CheyFidel.jpg" width="48%" />
+  <img src="Assets/Images/141013-che-guevara.jpg" width="48%" />
+</p>
 
 ---
 
-## 🚀 GitHub Pages Deployment
+## ✨ Features
 
-1. Push this repository to GitHub
-2. Go to **Settings → Pages**
-3. Set source to **`/ (root)`** of main branch
-4. Your site will be live at `https://yourusername.github.io/repo-name/`
-
-The `.nojekyll` file ensures GitHub Pages serves all files correctly without Jekyll processing.
-
----
-
-## 🌐 Browser Support
-
-| Browser | Version |
-|---------|---------|
-| Chrome  | 90+     |
-| Firefox | 88+     |
-| Safari  | 14+     |
-| Edge    | 90+     |
-
-> **Note**: Web Speech API voice quality varies by browser. Chrome provides the best experience for Argentine Spanish (`es-AR`).
+- **🎭 Cinematic WebAudio Sequence:** An intense, jaw-dropping opening sequence featuring flame canvas particles, dynamic reveals, and real historic audio triggered by a user click.
+- **📜 Scroll-Driven Timeline:** Explore 14 deeply researched events from his birth in 1928 to his death in 1967, complete with dynamic layouts and perfectly scaled, full-screen image cards.
+- **🗺️ Interactive Journey Map:** A beautifully drawn canvas map detailing his travels across South America, Cuba, and Africa, featuring animated pulsing nodes and a "Play Journey" mode.
+- **🎤 Web Speech API integration:** Listen to translated quotes in a generated Argentine Spanish accent, complete with dynamic visual equalizer bars.
+- **📸 Photorealistic Gallery:** A custom masonry layout gallery containing historic, high-resolution photography with full lightbox support.
+- **🕯️ Living Legacy:** A dedicated section to pay tribute with interactive Canvas spark particle bursts.
 
 ---
 
-## 🛠️ Local Development
+## 🛠️ Technology Stack
 
-No build tools required. Simply open `index.html` in any modern browser:
+- **Structure:** Semantic HTML5
+- **Styling:** Vanilla CSS3 (Custom Properties, Grid, Flexbox, Keyframe Animations)
+- **Logic:** Vanilla JavaScript (ES6+)
+- **APIs:** HTML5 Canvas, Web Audio API, Web Speech API, IntersectionObserver
+- **Design:** Photorealistic film grain, cinematic UI/UX, responsive dark/light layouts
 
-```bash
-# Option 1: Direct open
-# Double-click index.html
+## 🚀 Local Development
 
-# Option 2: Local server (recommended for best experience)
-npx serve .
-# or
-python -m http.server 8000
-```
+No complex build tools are required to run this project!
 
----
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/muhammadtaimoorajmal/che-guevara-documentary.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd che-guevara-documentary
+   ```
+3. Open `index.html` in your favorite web browser, or use a local development server for the best experience:
+   ```bash
+   npx serve .
+   ```
 
-## 📖 Historical Content
+## ⚖️ License
 
-All historical content is based on documented sources:
-- *The Motorcycle Diaries* — Ernesto Che Guevara
-- *Guerrilla Warfare* — Ernesto Che Guevara
-- *The Bolivian Diary* — Ernesto Che Guevara
-- Anderson, Jon Lee — *Che Guevara: A Revolutionary Life*
-- Castañeda, Jorge — *Compañero: The Life and Death of Che Guevara*
-
----
-
-## 👨‍💻 Author
-
-**Muhammad Taimoor Ajmal**
-- GitHub: [@muhammadtaimoorajmal](https://github.com/muhammadtaimoorajmal)
-- LinkedIn: [muhammadtaimoorajmal](https://www.linkedin.com/in/muhammadtaimoorajmal/)
+This project is open-source and available under the [MIT License](LICENSE). Educational and historical contents are provided for informational purposes.
 
 ---
 
-*"If you tremble with indignation at every injustice, then you are a comrade of mine." — Che Guevara*
+<div align="center">
+  <p>Built with ❤️ by <a href="https://github.com/muhammadtaimoorajmal">Muhammad Taimoor Ajmal</a></p>
+</div>
