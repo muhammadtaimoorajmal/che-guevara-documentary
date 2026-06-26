@@ -16,9 +16,7 @@ An immersive, cinematic single-page interactive documentary about the revolution
 
 ### 🎥 Cinematic Preview
 
-<div align="center">
-  <video src="Assets/Videos/preview.mp4" controls="controls" width="100%" style="max-width: 800px;"></video>
-</div>
+https://github.com/user-attachments/assets/22d02380-700b-4991-b28f-3b873998a0e6
 
 ---
 
