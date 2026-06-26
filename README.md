@@ -16,26 +16,11 @@ An immersive, cinematic single-page interactive documentary about the revolution
 
 ### 🎥 Cinematic Preview
 
-<video src="https://raw.githubusercontent.com/muhammadtaimoorajmal/che-guevara-documentary/main/Assets/Videos/preview.mp4" width="100%" autoplay loop muted playsinline controls></video>
-
-*(If the video does not autoplay, click the play button above)*
+<video src="Assets/Videos/preview.mp4" autoplay loop muted playsinline width="100%"></video>
 
 ---
 
 </div>
-
-## 🌟 Visual Showcase
-
-<p align="center">
-  <img src="Assets/Images/Che_Guevara_-_Guerrillero_Heroico_by_Alberto_Korda.jpg" width="48%" />
-  <img src="Assets/Images/comandante-ernesto-che-guevara.jpg" width="48%" />
-</p>
-<p align="center">
-  <img src="Assets/Images/CheyFidel.jpg" width="48%" />
-  <img src="Assets/Images/141013-che-guevara.jpg" width="48%" />
-</p>
-
----
 
 ## ✨ Features
 
