@@ -1,0 +1,349 @@
+/* ============================================================
+   ANIMATIONS.CSS — CHE GUEVARA: PATRIA O MUERTE
+   All @keyframes and reusable animation utilities
+   ============================================================ */
+
+/* ── Core Keyframes ──────────────────────────────────────── */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(60px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ── Glow & Pulse ─────────────────────────────────────────── */
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 8px var(--clr-red-glow); }
+  50%       { box-shadow: 0 0 30px var(--clr-red-glow), 0 0 60px var(--clr-red-glow); }
+}
+
+@keyframes pulseGold {
+  0%, 100% { box-shadow: 0 0 8px var(--clr-gold-glow); }
+  50%       { box-shadow: 0 0 30px var(--clr-gold-glow), 0 0 60px var(--clr-gold-glow); }
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px var(--clr-red), 0 0 20px var(--clr-red-glow); }
+  50%       { text-shadow: 0 0 20px var(--clr-red), 0 0 60px var(--clr-red-glow), 0 0 100px var(--clr-red-glow); }
+}
+
+@keyframes glowGold {
+  0%, 100% { text-shadow: 0 0 10px var(--clr-gold), 0 0 20px var(--clr-gold-glow); }
+  50%       { text-shadow: 0 0 20px var(--clr-gold), 0 0 60px var(--clr-gold-glow); }
+}
+
+/* ── Flame / Fire ─────────────────────────────────────────── */
+
+@keyframes flicker {
+  0%   { transform: scaleX(1)    scaleY(1)    rotate(0deg); opacity: 1; }
+  10%  { transform: scaleX(0.95) scaleY(1.05) rotate(-1deg); }
+  20%  { transform: scaleX(1.03) scaleY(0.97) rotate(1deg); opacity: 0.9; }
+  30%  { transform: scaleX(0.97) scaleY(1.03) rotate(-0.5deg); }
+  40%  { transform: scaleX(1.02) scaleY(1)    rotate(0.8deg); opacity: 1; }
+  50%  { transform: scaleX(0.98) scaleY(1.04) rotate(-1.2deg); opacity: 0.85; }
+  60%  { transform: scaleX(1.01) scaleY(0.98) rotate(0.5deg); }
+  70%  { transform: scaleX(0.96) scaleY(1.02) rotate(-0.7deg); opacity: 0.95; }
+  80%  { transform: scaleX(1.03) scaleY(1.01) rotate(1deg); }
+  90%  { transform: scaleX(0.98) scaleY(0.97) rotate(-0.3deg); opacity: 0.9; }
+  100% { transform: scaleX(1)    scaleY(1)    rotate(0deg); opacity: 1; }
+}
+
+@keyframes flickerFast {
+  0%, 100% { opacity: 1; transform: scaleX(1) scaleY(1); }
+  25%       { opacity: 0.8; transform: scaleX(0.93) scaleY(1.06); }
+  50%       { opacity: 0.9; transform: scaleX(1.05) scaleY(0.95); }
+  75%       { opacity: 0.85; transform: scaleX(0.97) scaleY(1.04); }
+}
+
+@keyframes flameDance {
+  0%   { clip-path: polygon(50% 0%, 60% 25%, 80% 10%, 70% 40%, 100% 30%, 80% 60%, 90% 80%, 65% 70%, 50% 100%, 35% 70%, 10% 80%, 20% 60%, 0% 30%, 30% 40%, 20% 10%, 40% 25%); }
+  25%  { clip-path: polygon(50% 0%, 65% 20%, 85% 8%, 72% 38%, 98% 28%, 78% 58%, 88% 78%, 62% 68%, 50% 100%, 38% 68%, 12% 78%, 22% 58%, 2% 28%, 28% 38%, 15% 8%, 35% 20%); }
+  50%  { clip-path: polygon(50% 0%, 55% 28%, 75% 12%, 68% 42%, 95% 32%, 82% 62%, 92% 82%, 68% 72%, 50% 100%, 32% 72%, 8% 82%, 18% 62%, 5% 32%, 32% 42%, 25% 12%, 45% 28%); }
+  75%  { clip-path: polygon(50% 0%, 62% 22%, 82% 9%, 70% 39%, 97% 29%, 80% 59%, 89% 79%, 64% 69%, 50% 100%, 36% 69%, 11% 79%, 21% 59%, 3% 29%, 30% 39%, 18% 9%, 38% 22%); }
+  100% { clip-path: polygon(50% 0%, 60% 25%, 80% 10%, 70% 40%, 100% 30%, 80% 60%, 90% 80%, 65% 70%, 50% 100%, 35% 70%, 10% 80%, 20% 60%, 0% 30%, 30% 40%, 20% 10%, 40% 25%); }
+}
+
+/* ── Float & Breathe ─────────────────────────────────────── */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33%       { transform: translateY(-8px) rotate(1deg); }
+  66%       { transform: translateY(-4px) rotate(-0.5deg); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50%       { transform: scale(1.015); opacity: 1; }
+}
+
+/* ── Rotation ─────────────────────────────────────────────── */
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes rotateReverse {
+  from { transform: rotate(360deg); }
+  to   { transform: rotate(0deg); }
+}
+
+/* ── Text Effects ─────────────────────────────────────────── */
+
+@keyframes burnText {
+  0%   { opacity: 0; text-shadow: 0 0 0px transparent; letter-spacing: 0.05em; }
+  20%  { opacity: 0.3; text-shadow: 0 0 20px #ff6600, 0 0 40px #cc2200; letter-spacing: 0.2em; }
+  40%  { opacity: 0.7; text-shadow: 0 0 30px #ffcc00, 0 0 60px #ff6600, 0 0 100px #cc2200; letter-spacing: 0.35em; }
+  60%  { opacity: 0.9; text-shadow: 0 0 20px #ffcc00, 0 0 40px #ff8800, 0 0 80px #cc0000; letter-spacing: 0.25em; }
+  80%  { opacity: 1; text-shadow: 0 0 15px #ffcc00, 0 0 30px #cc0000; letter-spacing: 0.15em; }
+  100% { opacity: 1; text-shadow: 0 0 10px #cc0000, 0 0 20px rgba(204,0,0,0.5); letter-spacing: 0.1em; }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50%       { border-color: var(--clr-red); }
+}
+
+@keyframes charReveal {
+  from { opacity: 0; transform: translateY(20px) rotateX(-90deg); }
+  to   { opacity: 1; transform: translateY(0) rotateX(0deg); }
+}
+
+/* ── Map & Path ──────────────────────────────────────────── */
+
+@keyframes dashDraw {
+  from { stroke-dashoffset: 1000; }
+  to   { stroke-dashoffset: 0; }
+}
+
+@keyframes markerPulse {
+  0%   { r: 6; opacity: 1; }
+  100% { r: 20; opacity: 0; }
+}
+
+@keyframes ping {
+  0%   { transform: scale(1); opacity: 1; }
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+/* ── Scroll Indicator ────────────────────────────────────── */
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50%       { transform: translateY(10px); opacity: 1; }
+}
+
+/* ── Opening Sequence Specific ───────────────────────────── */
+
+@keyframes emberGlow {
+  0%, 100% { box-shadow: 0 0 4px #ff6600, 0 0 10px #cc4400, 0 0 20px #881100; }
+  50%       { box-shadow: 0 0 8px #ffaa00, 0 0 20px #ff6600, 0 0 40px #cc2200; }
+}
+
+@keyframes smokeRise {
+  0%   { opacity: 0.6; transform: translateY(0) scaleX(1) rotate(0deg); }
+  50%  { opacity: 0.3; transform: translateY(-60px) scaleX(1.4) rotate(5deg); }
+  100% { opacity: 0; transform: translateY(-120px) scaleX(2) rotate(-3deg); }
+}
+
+@keyframes revealFromDark {
+  from { opacity: 0; filter: brightness(0) blur(10px); }
+  to   { opacity: 1; filter: brightness(1) blur(0px); }
+}
+
+/* ── Equalizer Bars ──────────────────────────────────────── */
+
+@keyframes eqBar1 {
+  0%, 100% { height: 20%; } 25% { height: 70%; } 50% { height: 40%; } 75% { height: 90%; }
+}
+@keyframes eqBar2 {
+  0%, 100% { height: 50%; } 25% { height: 30%; } 50% { height: 80%; } 75% { height: 20%; }
+}
+@keyframes eqBar3 {
+  0%, 100% { height: 80%; } 25% { height: 50%; } 50% { height: 20%; } 75% { height: 60%; }
+}
+@keyframes eqBar4 {
+  0%, 100% { height: 30%; } 25% { height: 90%; } 50% { height: 60%; } 75% { height: 40%; }
+}
+@keyframes eqBar5 {
+  0%, 100% { height: 60%; } 25% { height: 20%; } 50% { height: 90%; } 75% { height: 30%; }
+}
+
+/* ── Eternal Flame (Legacy Section) ─────────────────────── */
+
+@keyframes eternalFlameOuter {
+  0%, 100% { transform: scaleX(1) scaleY(1) rotate(0deg); }
+  20%       { transform: scaleX(0.92) scaleY(1.08) rotate(-2deg); }
+  40%       { transform: scaleX(1.06) scaleY(0.94) rotate(1.5deg); }
+  60%       { transform: scaleX(0.96) scaleY(1.06) rotate(-1deg); }
+  80%       { transform: scaleX(1.04) scaleY(0.98) rotate(1deg); }
+}
+
+@keyframes eternalFlameInner {
+  0%, 100% { transform: scaleX(1) scaleY(1); }
+  33%       { transform: scaleX(0.88) scaleY(1.12); }
+  66%       { transform: scaleX(1.1) scaleY(0.92); }
+}
+
+@keyframes candleLight {
+  0%   { opacity: 0; transform: scale(0) translateY(20px); }
+  50%  { opacity: 1; transform: scale(1.2) translateY(0); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ── Tribute Star Burst ──────────────────────────────────── */
+
+@keyframes starBurst {
+  0%   { opacity: 1; transform: scale(0) rotate(0deg); }
+  60%  { opacity: 1; transform: scale(1.5) rotate(180deg); }
+  100% { opacity: 0; transform: scale(2) rotate(360deg); }
+}
+
+/* ── Hero Parallax Overlay ───────────────────────────────── */
+
+@keyframes filmGrain {
+  0%   { transform: translate(0, 0); }
+  10%  { transform: translate(-2%, -1%); }
+  20%  { transform: translate(1%, 2%); }
+  30%  { transform: translate(-1%, 1%); }
+  40%  { transform: translate(2%, -2%); }
+  50%  { transform: translate(-1%, 2%); }
+  60%  { transform: translate(1%, -1%); }
+  70%  { transform: translate(-2%, 1%); }
+  80%  { transform: translate(1%, 2%); }
+  90%  { transform: translate(-1%, -2%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ── Stat Counter ────────────────────────────────────────── */
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Timeline Progress ───────────────────────────────────── */
+
+@keyframes progressLine {
+  from { height: 0; }
+  to   { height: 100%; }
+}
+
+/* ── Gallery Hover ───────────────────────────────────────── */
+
+@keyframes zoomIn {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+
+/* ── Navigation Underline ────────────────────────────────── */
+
+@keyframes underlineGrow {
+  from { width: 0; left: 50%; }
+  to   { width: 100%; left: 0; }
+}
+
+/* ── Utility Classes ─────────────────────────────────────── */
+
+.anim-fade-in        { animation: fadeIn 0.6s ease forwards; }
+.anim-fade-in-up     { animation: fadeInUp 0.7s ease forwards; }
+.anim-fade-in-down   { animation: fadeInDown 0.7s ease forwards; }
+.anim-fade-in-left   { animation: fadeInLeft 0.7s ease forwards; }
+.anim-fade-in-right  { animation: fadeInRight 0.7s ease forwards; }
+.anim-slide-in       { animation: slideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-glow           { animation: glow 2s ease-in-out infinite; }
+.anim-glow-gold      { animation: glowGold 2s ease-in-out infinite; }
+.anim-pulse          { animation: pulse 2s ease-in-out infinite; }
+.anim-float          { animation: float 4s ease-in-out infinite; }
+.anim-breathe        { animation: breathe 4s ease-in-out infinite; }
+.anim-flicker        { animation: flicker 3s ease-in-out infinite; }
+.anim-rotate         { animation: rotate 8s linear infinite; }
+
+/* Stagger delays */
+.delay-100  { animation-delay: 0.1s; }
+.delay-200  { animation-delay: 0.2s; }
+.delay-300  { animation-delay: 0.3s; }
+.delay-400  { animation-delay: 0.4s; }
+.delay-500  { animation-delay: 0.5s; }
+.delay-600  { animation-delay: 0.6s; }
+.delay-700  { animation-delay: 0.7s; }
+.delay-800  { animation-delay: 0.8s; }
+.delay-1000 { animation-delay: 1s; }
+
+/* Initial hidden state for scroll-triggered animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}

@@ -1,0 +1,191 @@
+/* ============================================================
+   RESPONSIVE.CSS — CHE GUEVARA: PATRIA O MUERTE
+   Breakpoints: 1200px / 1024px / 768px / 480px
+   ============================================================ */
+
+/* ── 1200px — Laptop/Desktop ─────────────────────────────── */
+@media (max-width: 1200px) {
+  .gallery-grid { columns: 3; }
+
+  #timeline::before { left: 40px; }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    padding-left: 80px;
+  }
+
+  .timeline-item:nth-child(odd)  .timeline-card,
+  .timeline-item:nth-child(even) .timeline-card { grid-column: 1; }
+
+  .timeline-item:nth-child(odd)  .timeline-node,
+  .timeline-item:nth-child(even) .timeline-node {
+    grid-column: 1;
+    position: absolute;
+    left: 0;
+    grid-row: 1;
+  }
+
+  .timeline-item:nth-child(odd)  .timeline-spacer,
+  .timeline-item:nth-child(even) .timeline-spacer { display: none; }
+
+  .timeline-item { position: relative; }
+
+  .timeline-item:nth-child(odd)  .timeline-node::before,
+  .timeline-item:nth-child(even) .timeline-node::before {
+    left: 48px;
+    top: 20px;
+    width: calc(100% - 48px);
+    height: 1px;
+    background: linear-gradient(to right, var(--clr-red), transparent);
+    position: absolute;
+  }
+
+  .timeline-progress-bar { display: none; }
+}
+
+/* ── 1024px — Tablet Landscape ───────────────────────────── */
+@media (max-width: 1024px) {
+  .container, .container-wide { padding: 0 var(--sp-lg); }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-stat:nth-child(2) { border-right: none; }
+
+  .nav-links { gap: var(--sp-lg); }
+
+  .lightbox-inner {
+    flex-direction: column;
+    max-width: 95vw;
+  }
+
+  .lightbox-img-wrap { max-width: 90vw; }
+  .lightbox-info { width: 100%; }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: var(--sp-xl);
+  }
+}
+
+/* ── 768px — Tablet Portrait ─────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 64px;
+    --sp-4xl: 4rem;
+  }
+
+  /* Nav */
+  .nav-links { display: none; }
+  #hamburger { display: flex; }
+
+  /* Hero */
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .hero-ctas { flex-direction: column; align-items: center; }
+
+  /* Timeline */
+  #timeline::before { left: 24px; }
+
+  .timeline-item { padding-left: 60px; }
+
+  .timeline-dot { width: 36px; height: 36px; font-size: 1rem; }
+
+  .timeline-card-image { height: 160px; }
+
+  /* Gallery */
+  .gallery-grid { columns: 2; }
+
+  /* Speeches */
+  .speeches-grid { grid-template-columns: 1fr; }
+
+  /* Legacy */
+  .legacy-stats { grid-template-columns: 1fr; max-width: 300px; }
+
+  /* Map */
+  #world-map-canvas { height: 380px; }
+
+  /* Section */
+  .section { padding: var(--sp-3xl) 0; }
+
+  /* Lightbox */
+  .lightbox-img-wrap { max-height: 50vh; }
+
+  #lightbox-prev { left: var(--sp-sm); }
+  #lightbox-next { right: var(--sp-sm); }
+
+  /* Footer */
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+/* ── 480px — Mobile ──────────────────────────────────────── */
+@media (max-width: 480px) {
+  :root {
+    --sp-4xl: 3rem;
+    --sp-3xl: 2.5rem;
+  }
+
+  /* Hide custom cursor on mobile */
+  #cursor, #cursor-ring { display: none; }
+  body { cursor: auto; }
+  button, a { cursor: pointer; }
+
+  /* Nav */
+  .nav-inner { padding: 0 var(--sp-md); }
+  .nav-logo .logo-guevara { display: none; }
+
+  /* Hero */
+  .hero-content { padding: 0 var(--sp-md); }
+  .hero-stats { display: none; }
+  .scroll-indicator { display: none; }
+
+  /* Timeline */
+  #timeline::before { left: 16px; }
+  .timeline-item { padding-left: 48px; }
+  .timeline-dot { width: 28px; height: 28px; font-size: 0.85rem; }
+  .timeline-card-actions { flex-direction: column; }
+  .timeline-controls { flex-direction: column; align-items: center; }
+
+  /* Gallery */
+  .gallery-grid { columns: 1; }
+  .gallery-filters { gap: var(--sp-xs); }
+  .filter-btn { padding: 0.4rem 0.8rem; font-size: 0.65rem; }
+
+  /* Map */
+  #world-map-canvas { height: 280px; }
+  .map-legend { gap: var(--sp-md); }
+
+  /* Speeches */
+  .quote-card { padding: var(--sp-lg); }
+  .featured-quote { padding: var(--sp-xl); }
+
+  /* Opening */
+  #opening-text { font-size: clamp(1.5rem, 8vw, 3rem); white-space: normal; text-align: center; width: 90%; }
+
+  /* Section header */
+  .section-title { font-size: clamp(1.4rem, 6vw, 2rem); }
+
+  /* Container */
+  .container { padding: 0 var(--sp-md); }
+}
+
+/* ── Reduced Motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero-bg { transform: none !important; }
+}
+
+/* ── Print ───────────────────────────────────────────────── */
+@media print {
+  #opening-sequence, #navbar, #cursor, #cursor-ring,
+  .timeline-controls, .gallery-filters, .map-controls,
+  .speeches-controls, .tribute-particles { display: none !important; }
+
+  body { background: #fff; color: #000; }
+  #main-content { opacity: 1 !important; }
+}
