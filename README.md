@@ -16,7 +16,9 @@ An immersive, cinematic single-page interactive documentary about the revolution
 
 ### 🎥 Cinematic Preview
 
-https://github.com/muhammadtaimoorajmal/che-guevara-documentary/raw/main/Assets/Videos/preview.mp4
+<div align="center">
+  <video src="Assets/Videos/preview.mp4" controls="controls" width="100%" style="max-width: 800px;"></video>
+</div>
 
 ---
 
